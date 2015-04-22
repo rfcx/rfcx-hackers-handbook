@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RFCx Hacker&apos;s Handbook</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+
+    <link href="css/base-en-desktop-033a186f.css" rel="stylesheet">
+    <link href="css/ible-desktop-cd649e29.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+
+        <script type="text/javascript" src="/intl_static/build/head-desktop-61099d3b.js"></script>
+
+
+    
+    
+    
+        
+<script type="text/javascript" src="https://mtrx.go.sonobi.com/morpheus.instruct.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="https://rfcx.org/">www.rfcx.org</a></li>
+            <li role="presentation"><a href="mailto:contact@rfcx.org">contact@rfcx.org</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">RFCx Hacker&apos;s Handbook: Draft v1</h3>
+      </div>
+
+      <div class="jumbotron">
+
+
+
+
+
+
+<div id="instructable-content" style="display:block;height:auto;">
+  
+  
+  <div id="instructable-body" style="display:block;height:auto;">
+  
+
+
+
+  <div class="step-container" style="display:block;height:auto;">
+  
+
+  
+  
+
+
+<div id="photoset-SQAK05RI7GS7RJ5" data-item-id="SQAK05RI7GS7RJ5" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-image">
+  <a class="photoset-link" href="/file/FVO5NQ5I8FQZFC4/" data-fancybox-href="http://cdn.instructables.com/FVO/5NQ5/I8FQZFC4/FVO5NQ5I8FQZFC4.MEDIUM.jpg">
+  <div class="lazy loading"><img class="photo" alt="Picture of Rainforest Connection: Hackers Handbook" data-image-id="FVO5NQ5I8FQZFC4" data-notes="[]" data-orig-height="406" data-orig-width="608" src="http://cdn.instructables.com/FVO/5NQ5/I8FQZFC4/FVO5NQ5I8FQZFC4.MEDIUM.jpg" width="620" height="465" style="max-width: 608px;"></div>
+  </a>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  <p><strong>Introduction</strong></p><p>Greetings. Welcome to an ongoing experiment in sound detection.</p><p>The goal of the RFCx Hacker&apos;s Handbook v1 is to allow you to turn an Android phone into a basic D.I.Y version of the RFCx device using stuff you can purchase online.</p><p>Rainforest Connection devices were developed to generate useful data about the ecosystem, particularly data to save rainforests and endangered species habitats. People are always thinking of other new uses. We are too. </p><p>Before wild imagination takes hold, a few words: What we are sending you today is extremely basic in order that you can actually <em>perform</em> this process. We spent a great deal of time in the garage after our last field demonstration in Africa to make the assembly process simpler. This is just a starting point. Undertaking the process below does not yet provide advanced capabilities like sound analysis or alerts, capabilities and analysis tiers which are changing every month based on fieldwork and testing. In other words, many aspects of the software are still too dynamic to be useful to reliably share. But depending on your skills as a programmer, you could use your phone to detect and send alerts for other types of sounds.</p><p> In other words: </p><p>** You won’t be able to use your device to detect specific sounds unless you install and adapt your own analysis code. We do plan to release more easily installed versions of our software in sync with the opening of our web API, which we expect to be able to take on upon the conclusion of our current tests in Africa and the Amazon. In the meantime, all of our latest code is fully open source and available at <a href="https://github.com/rfcx" target="_blank">https://github.com/rfcx</a>. Contributions, forks, and criticisms are welcome.  ** </p><p><strong>Want to work with us on a code based project?</strong></p><p><strong> </strong> If enough people are interested to help develop code we want to help create a repository, write us if you want to do that: <a href="mailto:contact@rfcx.org">contact@rfcx.org</a>. Most of the current sound analysis is in Python, and can be run on any desktop computer or server. (Note: if you do write us regarding the Hackers Handbook, please reference "Hackers Handbook," in the title of your email.)</p><p>Our current wish is to update the handbook periodically to allow a wider scope of capabilities: including plugging into our API and different levels of sound detection as we develop them. We suspect many of you will prefer to wait until a slightly later version to engage turning your phone into a RFCx device, but our hope is you have some skills to do this now.</p><p><strong>How We Got Here</strong></p><p>Back in September, as we were making 40 devices in our garage for a number of pilot projects, we started documenting our assembly process for this handbook. After reviewing our progress, we found that it was just too complicated to be useful for others.  At that point we were developing a rather standard written instruction manual. After more refinement in the field in Africa, we decided this was not the way to show people how to build a device. So, in the name of trying to make assembly easier, we scrapped the original concept, started over, added some delays (apologies) and endeavored to create a video based Hackers Handbook which is what we are sending you here. For the most crucial step of our system, having a device, we think this is better. Once you have something built, we hope you will get in touch with us so we can hear your thoughts and also convey other possible steps based on your desired use scenario. A digital handbook also has the advantage of being an iteration that will allow more changes. We think it is more user friendly. Is it?</p>
+  </div>
+
+  
+  
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step1" href="#step1">
+  <h2 class="step-title">Step 1: The Components</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-SWEA0UXI7GS8INR" data-item-id="SWEA0UXI7GS8INR" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step1/The-Components/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-image">
+  <a class="photoset-link" href="/file/FIGWDNUI81GDUP0/" data-fancybox-href="http://cdn.instructables.com/FIG/WDNU/I81GDUP0/FIGWDNUI81GDUP0.MEDIUM.jpg">
+  <div class="lazy"><img class="photo" alt="Picture of The Components" data-image-id="FIGWDNUI81GDUP0" data-notes="[]" data-orig-height="1080" data-orig-width="1920" src="http://cdn.instructables.com/FIG/WDNU/I81GDUP0/FIGWDNUI81GDUP0.MEDIUM.jpg" data-medium-image="http://cdn.instructables.com/FIG/WDNU/I81GDUP0/FIGWDNUI81GDUP0.MEDIUM.jpg" data-original="http://cdn.instructables.com/FIG/WDNU/I81GDUP0/FIGWDNUI81GDUP0.MEDIUM.jpg" width="620" height="465" style="max-width: 1920px; display: inline;"></div>
+  </a>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  <p>All the stuff you need</p><p>Instead of looking for the best deals, we opted for the simplicity of one-stop shopping.</p>
+<p><strong>For Adafruit purchases, you may use the 10% discount coupon, "PROMEMADA" at Check Out. </strong><small>Thanks to Instructables.com for providing this option.</small></p>
+  <p>Components you will need and links to purchase them:</p><ul> 
+
+  <li>1 Android phone</li>
+  <li>1 External microphone (any microphone you can plug into the phone jack): 
+    <a href="http://r-f.cx/rfcx-sp-microphone" rel="nofollow">SoundProfessionals.com</a>
+  
+  <li>1 Power controller: <a href="http://r-f.cx/rfcx-ada-390" rel="nofollow">AdaFruit.com (#390)</a></li>
+
+  <li>1 Thermistor: <a href="http://r-f.cx/rfcx-ada-372" rel="nofollow">AdaFruit.com (#372)</a></li>
+  
+  <li>1 Step up converter: <a href="http://r-f.cx/rfcx-ada-1903" rel="nofollow">AdaFruit.com (#1903)</a></li>
+
+  <li>1 JST Cable: <a href="http://r-f.cx/rfcx-ada-261" rel="nofollow">AdaFruit.com (#261)</a></li>
+
+  <li>1 Battery Pack Adafruit: <a href="http://r-f.cx/rfcx-ada-354" rel="nofollow">AdaFruit.com (#354)</a></li>
+  
+  <li>1 Micro USB Cable (right angle for fitting): <a href="http://r-f.cx/rfcx-ada-1318" rel="nofollow">AdaFruit.com (#1318)</a></li>
+
+  <li>1 set of DC Power Cabling: <a href="http://r-f.cx/rfcx-ada-743" rel="nofollow">AdaFruit.com (#743)</a></li>
+  
+  <li>1 Enclosure (a box or container in which to nest all the above components): <a href="http://r-f.cx/rfcx-radioshack-6x3x2" rel="nofollow">RadioShack.com</a> or, HIGHLY RECOMMENDED, choose a size that will fit YOUR Android phone at <a href="http://r-f.cx/rfcx-polycase" rel="nofollow">PolyCase.com</a></li></ul>
+  
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step2" href="#step2">
+  <h2 class="step-title">Step 2: Charge Controller (Assembly)</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-S4UX5LRI81GDWK1" data-item-id="S4UX5LRI81GDWK1" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step2/Charge-Controller-Assembly/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/nsJ5v6XGfSY?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step3" href="#step3">
+  <h2 class="step-title">Step 3: StepUp Cable (Assembly)</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-SPZK799I81GDWLB" data-item-id="SPZK799I81GDWLB" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step3/StepUp-Cable-Assembly/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/X60IGKPitQM?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  <p>Merge your two <strong>(2) JST cables</strong> in order to connect the Charge Controller to what you'll build next.</p>
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step4" href="#step4">
+  <h2 class="step-title">Step 4: StepUp Convertor (Assembly)</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-SMTVVCVI800ZUDJ" data-item-id="SMTVVCVI800ZUDJ" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step4/StepUp-Convertor-Assembly/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/mtwp9EQQwCI?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  <p>Assemble your <strong>Step-Up Convertor</strong> (Adafruit PowerBoost 500). This component will transform the ~3.7 volt power supply into a 5 volt USB input for your Android phone.</p>
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step5" href="#step5">
+  <h2 class="step-title">Step 5: StepUp Convertor Mounting</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-SUK1PJ7I81GE0QE" data-item-id="SUK1PJ7I81GE0QE" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step5/StepUp-Convertor-Mounting/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/m3oIkuDenKM?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  <p>Mount your StepUp Convertor on top of the Charge Controller, and connect the two components.</p><p>Optionally, you may use a 3D printed balancing table for positioning the Charge Controller inside the enclosure.</p><p>The file for the 3D printed table may be obtained from <a href="https://github.com/rfcx/rfcx-hardware/blob/master/3d-printing/controller-table/controller-table-07.stl" rel="nofollow">here</a> in our Github repository.</p>
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step6" href="#step6">
+  <h2 class="step-title">Step 6: Enclosure (Preparation)</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-SCK2DAYI81GDZHV" data-item-id="SCK2DAYI81GDZHV" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step6/Enclosure-Preparation/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/DoEU8AdI7Is?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step7" href="#step7">
+  <h2 class="step-title">Step 7: Component Insertion</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-S1PQCPZI81GDWP4" data-item-id="S1PQCPZI81GDWP4" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step7/Component-Insertion/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/geugxwUlWU4?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step8" href="#step8">
+  <h2 class="step-title">Step 8: Smartphone Insertion</h2>
+  </a>
+  
+
+  
+  
+
+
+<div id="photoset-S1NXKMEI81GDWQK" data-item-id="S1NXKMEI81GDWQK" data-item-url="https://www.instructables.com/preview/uK4t9LJfRpXYkX0xvNW6bpowVG44A6/step8/Smartphone-Insertion/" class="photoset">
+  
+  
+  <div class="photoset-row cols-1" style="margin-bottom: 5px; clear: left; overflow: hidden;"><div class="photoset-cell" style="float: left; display: block; line-height: 0; box-sizing: border-box; width: 100%;"><div class="photoset-item photoset-video">
+  <iframe allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/FxNtjOZABB8?feature=oembed" width="1024"></iframe>
+  </div></div></div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+
+  <div class="step-body">
+  <p>Slide your Android smartphone (snugly) into your enclosure.</p>
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step9" href="#step9">
+  <h2 class="step-title">Step 9: Microphone Attachment</h2>
+  </a>
+  
+
+  
+
+  <div class="step-body">
+  <p>Attach the microphone, no other explanation needed!</p><p>Were you able to follow the steps? How could we improve?</p><p>contact@rfcx.org</p><p>Please put Hackers Handbook in the title of your email.</p>
+  </div>
+
+  
+
+  
+  </div>
+
+  <div class="step-container">
+  
+  <a id="step10" href="#step10">
+  <h2 class="step-title">Step 10: General Philosophy Behind the Rainforest Connection System</h2>
+  </a>
+  
+
+  
+
+  <div class="step-body">
+  <p>General Philosophy Behind The Rainforest Connection System</p><p>Wherever possible, we seek to use existing infrastructure, such as cell networks to gather data and use MESH/GSM and other modes of data transfer to relay information. </p><p>We started with the problem of deforestation because of its triple impacts on climate change, species extinction, indigenous rights, as well as the enormous impacts of deforestation on water and air quality. Protecting Rainforests also means protecting future medicines, since many of the world's great cures have derived from plants in the rainforest. </p><p>Rainforest destruction accounts for up to 17% of the CO2 emissions worldwide. Rainforest destruction is currently monitored by satellites which give a picture of the destruction after it has happened and after illegal lumber has already been taken to market. Audio data and sound profiles related to rainforest destruction are not captured by any system in use today.</p><p> A part of the goal of the hackers handbooks is to begin to familiarize hackers with the actual set up of our evolving system so that we can support a community of people who might join our general efforts to crowd source solutions to these and other problems. For instance, we have seen first hand that sound detection at distance is useful for disrupting patterns of illegal logging. When illegal logging happens at scale it takes many days and weeks for loggers to create the inroads to illegally cut, remove and transport lumber. Being able to run explicit analysis for the sounds of large trucks, heavy machinery and chainsaws (capabilities we are still testing and refining) indicates where the activities are happening and allows for planned interventions or the ability to gain valuable forensic evidence and patterns of illegal activity that create an intervention mechanism.   </p><p>Generally speaking, in terms of halting deforestation and species extinction (poaching) the kind of data we need to protect rainforests doesn’t exist. If it did, we wouldn't be creating hardware platforms and rainforest destruction would be easier to stop. For example, according to Interpol 90% of logging in rainforests is illegal. The reason why this is so is because there is no working response mechanism for illegal rainforest destruction. Rangers or law enforcement rarely come face to face with illegal loggers, whereas if you have an emergency at your home, even if you live in the middle of nowhere in the US, you can probably dial 911 and contact emergency services for a response. Because no such response mechanism exists for rainforest destruction we began to experiment with hardware that could provide data useful for this purpose. Thanks for being a part of this experiment! We have a lot of work to do. We thank you, as always, for your patience, understanding and support. Criticism is always welcome, as are better ideas!</p>
+  </div>
+
+  
+
+  
+  </div>
+
+  
+  
+  
+  </div>
+  
+
+
+  
+  
+
+
+
+<div id="commentsWrapper">
+
+
+  <div id="topLevelCommentField" class="post-comment-container">
+
+  </div>
+  <div id="loaded-comments" class="hide">
+  
+  </div>
+  <div id="comment-list">
+
+  </div>
+  <div id="comments-controls">
+  
+  <button class="btn" id="see-more-comments"><i class="icon-arrow2-down"></i><span class="comments-controls-text">More Comments</span></button>
+  
+  </div>
+</div>
+
+<script id="template_LibraryModal" type="text/template"><!--jqfix-->
+  <div class="modal hide fade imageLibraryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h3><< trans.AddImagesFromLibrary >></h3>
+  </div>
+  <div class="modal-body uploader loading">
+  <div id="imageTray_wrapper"></div>
+  <div class="emptyLibrary"><div class="message"><< trans.EmptyLibrary >></div></div>
+  </div>
+  <div class="modal-footer">
+  <a href="#" class="btn pull-left addFromUpload"><< trans.UploadNewImages >></a>
+  <a href="#" class="btn btn-primary pull-right done"><< trans.Done >></a>
+  <div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+  << trans.Tags >>
+  <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+  
+  <li><a href="#" class="changeTag"><< trans.ViewAll >></a></li>
+  </ul>
+  </div>
+
+  </div>
+  </div>
+</script>
+
+<script type="text/template" id="template_LibraryImage"><!--jqfix-->
+  <div class="library_file wrapper" id="library-<< unid >>">
+  <img src="<< square2Url >>" />
+  <h4 class="nonImageFileLabelLibrary_<<!image>>"><< name >></h4>
+  <label class="checkbox">
+  <input type="checkbox" class="fileSelector"> << trans.LibrarySelImage >>
+  </label>
+  </div>
+</script>
+
+<script id="template_uploadModal" type="text/template"><!--jqfix-->
+  <form id="modalfileupload" action="/json-api/upload" method="POST" enctype="multipart/form-data">
+  <div id="uploadModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h3 id="myModalLabel"><< trans.UploadNewImages >></h3>
+  </div>
+  <div class="modal-body uploader">
+  <h4 class="modal_dragHere dragArea visible"><< trans.DragFilesHere >></h4>
+  <div class="uploadTable"><ul class="files dragArea"></ul></div>
+  </div>
+  <div class="modal-footer">
+  <!-- Global progress bar -->
+  <div class="fileupload-progress fade" style="display:none">
+  <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div class="bar" style="width: 0%;"></div>
+  </div>
+  </div>
+  <a href="#" class="btn pull-left addFromLibraryButton"><< trans.AddFromLibrary >></a>
+
+  <button id="uploaderModalCancelBtn" class="btn" data-dismiss="modal" aria-hidden="true"><< trans.Cancel >></button>
+  <button  type="submit" id="btn-start-upload" class="btn btn-primary pull-right start"><< trans.Upload >></button>
+  <a class="btn btn-primary pull-right closeModal" style="display:none;"><< trans.Done >></a>
+  <span class="btn fileinput-button">
+  <span class="browsetext"><< trans.Browse >></span>
+  <input type="file" name="file_upload" id="file_upload_1" multiple="multiple" />
+  </span>
+
+  </div>
+  </div>
+  </form>
+</script>
+
+<script type="text/template" id="template_fileUpload_ie"><!--jqfix-->
+  <div id="uploadify_<< id >>" class="fileUploadLine queued" fileId="<< id >>">
+  <button class="pull-right btn ie_cancelbutton">
+  <i class="ibl-icon icon-x"></i>
+  </button>
+  <span class="fileName"><< name >> (<< formattedSize >>)</span>
+  <span class="fileStatus"></span>
+
+
+  <div class="progress progress-striped">
+  <div class="progress-bar progress-bar-success" style="width: 0%">
+  </div>
+  </div>
+  </div>
+</script>
+
+<script id="template_uploadModal_preview" type="text/template"><!--jqfix-->
+  <[ for (var i=0, file; file=files[i]; i++) {  ]>
+  <li class="modalUploadPreview template-upload fade">
+
+  <div class="preview file-<[ if (file.type != undefined && file.type.indexOf('image') == -1) {print('NONIMAGE');} else {print('IMAGE');}  ]>">
+  <span class="fade" id=<[ print('"'+_.uniqueId('PreviewImage-')+'"'); ]>></span>
+  </div>
+
+  <div class="preview_statsSection">
+  <div class="progress progress-success progress-striped active fade out" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar" style="width:0%;"></div></div>
+  <div class="text">
+  <span class="fileName"><<files[0].name>></span>
+  <span class="fileSize">(<<formatFileSize(file.size)>>)</span>
+  </div>
+  <div class="statusText fade in"><< trans.ReadyForUpload >></div>
+  </div>
+
+  <div class="btn btn_rightRotate">
+  <i class="ibl-icon icon-rotate"></i>
+  </div>
+  <div class="cancel" >
+  <button class="btn">
+  <i class="ibl-icon icon-x"></i>
+  <span><!--<<locale.fileupload.cancel>>--></span>
+  </button>
+  </div>
+
+
+  <!-- REMOVING START BUTTON BREAKS UPLOADER! -->
+  <div class="start" style="display:none;">
+  <button class="btn btn-primary">
+  <i class="icon-upload icon-white"></i>
+  <span><<locale.fileupload.start>></span>
+  </button>
+  </div>
+  </li>
+  <[ } ]>
+</script>
+
+<script id="template_uploadModal_uploadComplete" type="text/template"><!--jqfix-->
+
+  <[ for (var i=0, file; file=files[i]; i++) {  ]>
+
+  <li class="modalUploadPreview complete template-upload fade">
+  <div class="preview ">
+  <span class="fade in">
+  <img src="<<file.square2Url>>" />
+  </span>
+  </div>
+
+  <div class="preview_statsSection">
+  <div class="text">
+  <span class="fileName"><<file.name>></span>
+  </div>
+  <div class="statusText"><< trans.UploadComplete >></div>
+  </div>
+  </li>
+  <[ } ]>
+</script>
+
+<script id="template_uploadModal_uploadError" type="text/template"><!--jqfix-->
+
+  <[ for (var i=0, file; file=files[i]; i++) {  ]>
+
+  <li class="modalUploadPreview error template-upload fade">
+  <div class="preview ">
+  <span class="fade in">
+  <img src="<<file.square2Url>>" />
+  </span>
+  </div>
+
+  <div class="preview_statsSection">
+  <div class="text">
+  <span class="fileName"><<file.name>></span>
+  </div>
+  <div class="statusText"><< trans.Error >>: << file.error >></div>
+  </div>
+  </li>
+  <[ } ]>
+</script>
+
+<script type="text/template" id="template_FileSet"><!--jqfix-->
+  <div class="fileset_placeholder_holder"><div class="fileset_placeholder"><div class="fileset_textTainer"><< helperText >></div></div></div>
+</script>
+
+<script type="text/template" id="FileTemplate"><!--jqfix-->
+  <!-- 'li' container added in backbone view -->
+  <a class="drag_edit_photoset" href="<< largeUrl >>"  rel="InstructableFile" title="<< trans.EnlargeAddNotes >>">
+  <img class="IblesFileThumbnail" src="<< square3Url >>" />
+  <h4 class="nonImageFileLabel"><< name >></h4>
+  </a>
+</script>
+
+<script type="text/template" id="top-level-post-comment">
+  <form class="post-comment-form" name="PostCommentForm">
+  <input class="commentFiles" name="files" type="hidden" value=""/>
+  <div class="post-comment-box clearfix">
+  <div class="commenter-image pull-left">
+  <img class="postCommentAvatar" src="<< avatar >>" alt="Post a comment"/>
+  </div>
+  <div class="post-comment-body pull-right">
+  <div class="comment-tip" data-toggle="tooltip" data-placement="top" title="Highlight text to apply styling"></div>
+  <textarea class="postCommentBody redactorAirComment" name="content"></textarea>
+  <div class="alert alert-info imadeit-image-warning hide">
+  <button type="button" class="close">&times;</button>
+  <strong>"I Made It"</strong> comments require images. Uncheck for normal comment. 
+  </div>
+  <div class="comment-error hide">
+  </div>
+  </div>
+  <div class="post-comment-toolbar clearfix">
+  <div class="policy pull-left">
+  <img src="/intl_static/img/instructable/comments/be-nice-en.png" alt="Be nice!"/>
+  <p>We have a be nice comment policy.<br>
+  Please be positive and constructive. 
+  </p>
+  </div>
+  <div class="comment-actions pull-right">
+  <button class="comment-imadeit-toggle btn"><i class="icon icon-checkmark1 hide"></i><i class="icon icon-imadeit"></i>&nbsp;   I Made it!</button>
+  <button class="addCommentImages btn"><i class="icon icon-camera selected">&nbsp;  </i>  Add Images</button>
+  <button class="btn post-comment-btn btn-orange" data-loading-text="<i class='icon-spin icon-large'></i>">Post Comment</button>
+  </div>
+  </div>
+  <ul class="instructable-image-bucket clearfix ui-sortable ui-droppable"></ul>
+  </div>
+  </form>
+</script>
+
+<script type="text/template" id="template-post-comment">
+  <div class="post-comment-container">
+  <form class="post-comment-form" name="PostCommentForm">
+  <input class="commentFiles" name="files" type="hidden" value=""/>
+  <div class="post-comment-box">
+  <div class="commenter-image pull-left">
+  <img class="postCommentAvatar" src="<< avatar >>" alt="<< author >>"/>
+  </div>
+  <div class="post-comment-body pull-right">
+  <div class="comment-tip" data-toggle="tooltip" data-placement="top" title="Highlight text to apply styling"></div>
+  <textarea class="postCommentBody redactorAirComment" name="content"></textarea>
+  <div class="comment-files hide"></div>
+  </div>
+  <div class="post-comment-toolbar clearfix">
+  <div class="policy pull-left">
+  <img src="/intl_static/img/instructable/comments/be-nice-en.png"/>
+  <p>We have a be nice comment policy.<br>
+  Please be positive and constructive. 
+  </p>
+  </div>
+
+  <div class="actions pull-right">
+  <button class="addCommentImages btn">Add Images</button><button class="post-comment-btn btn btn-orange" data-loading-text="<i class='icon-spin icon-large'></i>">Reply</button>
+  </div>
+  </div>
+  <ul class = "instructable-image-bucket clearfix ui-sortable ui-droppable"></ul>
+  </div>
+  </form>
+  </div>
+</script>
+
+<script type="text/template" id="template-file">
+  <div class="comment-imageContainer">
+  <[ if (image){ ]>
+  <a href="<< largeUrl >>">
+  <[ }else{ ]>
+  <a href="<< downloadUrl >>" target="_blank">
+  <[ } ]>
+  <img src="<< square2Url >>">
+  <[ if (!image){ ]>
+  <h4 class="attachedFileLabel"><< name >></h4>
+  <[ } ]>
+  </a>
+  <a data-id="<< id >>" href="#" class="removeAttachedImg">Remove</a>
+  </div>
+</script>
+
+<script type="text/template" id="template-attached-file">
+  <a href="<< originalUrl >>">
+  <img src="<< tinyUrl >>" alt=""/>
+  <span class="entryExtraTitle"><< name >></span>
+  </a>
+</script>
+
+<script type="text/template" id="template-image-file">
+  <a class="comment-photos-link" rel="fancybox-thumb-<< commentId >>" href=<< largeUrl >> data-fancybox-href="/file/ << id >>">
+  <img class="photo fancybox-thumb" alt="Picture of << name >>" data-image-id="<< id >>" data-notes='<< imageNotes >>' data-orig-height="<< height >>" data-orig-width="<< width >>" src="<< mediumUrl >>"/>
+  </a>
+</script>
+
+<script type="text/template" id="template_hoverFile"><!--jqfix-->
+   <div class="hover_frame">
+   <a href="#" class="delete_file">&times;</a>
+   <a href="#" class="view_addNotes"><< view >></a>
+   </div>
+</script>
+
+<script type="text/template" id="template-comment-list-item">
+<div class="comment" id="comment-<<id>>">
+  <div class="achievement-holder"></div>
+  <div class="avatar-container">
+  <a class="memberstats authorsMemberPageLink"><img src="<< avatar >>"></a>
+  </div>
+  <div class="comment-main-container">
+  <div class="comment-header">
+  <span class="comment-author">
+  <a class="author-link pro" href="/member/<<author>>"><<author>></a>
+  <span class="made-it-header comment-info hide"> made it!</span>
+  <span class="is-author comment-info hide">(author)</span>
+  <span class="is-reply hide">
+  <i class="icon-caret-right comment-info"></i>
+  <a class="reply-to" href="/member/<<replyAuthor>>"><<replyAuthor>></a>
+  </span>  </span>
+  <span class="comment-date pull-right comment-info"><<commentTime>></span>
+  </div>
+  <div class="comment-body-container">
+  <div class="comment-body"><<body>></div>
+  <div  data-item-id="<< id >>" class="comment-photos"></div>
+  </div>
+  <div class="comment-files"></div>
+  <div class="comment-actions clearfix">
+  <a class="action btn btn-mini pull-right replyToCommentBtn login-required">Reply</a>
+  <span class="imadeit-checkbox pull-right hide action">
+  <input type="checkbox" class="imadeit-check" name=""/>IMadeIt
+  </span>
+  <a class="action pull-right deleteComment hide">Delete</a>
+  <a class="action pull-right deleteThread hide">Delete Thread</a>
+  <a class="action pull-right limboBtn hide">[+l]</a>
+  <div class="action pull-right dropdown flagComment hide">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Flag</a>
+  <ul class="dropdown-menu">
+  
+  <li><a data-flagname="not_nice">Not Nice</a></li>
+  
+  <li><a data-flagname="inappropriate">Inappropriate</a></li>
+  
+  <li><a data-flagname="spam">Spam</a></li>
+  </ul>
+  </div>
+  <img class = "request-img pull-right hide" src = "/static/img/spinner.gif" height = '10' width = '10'/>
+  <img class="request-success pull-right hide" src = "/static/img/ico_check.gif" height = '10' width = '10'/>
+  <img class="request-failure pull-right hide" src = "/static/img/ico_cross.gif" height = '10' width = '10'/>
+  </div>
+  </div>
+</div>
+
+</script>
+
+
+<script type="text/template" id="template-achievement">
+  <i style="display:none" class="achievement achievement-featured icon-featured"></i>
+  <i style="display:none" class="achievement achievement-comments icon-comments"></i>
+  <i style="display:none" class="achievement achievement-views icon-views1"></i>
+  <div style="display:none" class="achievement-popover-wrapper">
+  <div style="display:none" class="coin-wrapper coin-featured-wrapper">
+  <p></p>
+  <i class="achievement-coin achievement-coin-featured"></i>
+  </div>
+  <div style="display:none" class="coin-wrapper coin-comments-wrapper">
+  <p></p>
+  <i class="achievement-coin achievement-coin-comments"></i>
+  </div>
+  <div style="display:none" class="coin-wrapper coin-views-wrapper">
+  <p></p>
+  <i class="achievement-coin achievement-coin-views"></i>
+  </div>
+  </div>
+</script>
+
+
+
+<script id="statscard-template" type="text/template">
+  <div class="statscard">
+  <[ if (data.instructablesCount) { ]>
+  <div class="header clearfix">
+  <div class="col main-stat"><span class="count instructables-count"><< data.instructablesCount >></span><br/> Instructables</div>
+  <[ if (data.publishedCollectionsCount) { ]>
+  <div class="col main-stat"><span class="count collections-count"><< data.publishedCollectionsCount >></span><br/> Collections</div>
+  <[ } ]>
+  <div class="col other-stats">
+  <div class="views"><i class="icon-views"></i><span class="count"><< data.views >></span> Views</div>
+  <div class="favorites"><i class="icon-favorites"></i><span class="count"><< data.favoritesCount >></span> Favorited</div>  
+  </div>
+  </div>
+  <[ } ]>
+  <div class="body">
+  <div class="author-box clearfix">
+  <div class="author-image">
+  <a href="/member/<< encodeURIComponent(data.screenName) >>/">
+  <img src="<< data.square2Url >>"/>
+  </a>
+  </div>
+  <div class="author-details">
+  <div class="screen-name">
+  <a href="/member/<< encodeURIComponent(data.screenName) >>/"><< data.screenName >></a>
+  </div>
+  <div class="signup-info">
+  Joined << data.signup >> <[ if (data.pro) { ]><img src="/static/img/statscard/pro.gif"/><[ } ]>
+  </div>
+  <div class="follow">
+  <a class="btn btn-yellow follow-btn" data-followtxt="Follow" data-followingtxt="Following" data-unfollowtxt="Unfollow">
+  <[ if (data.following) { ]>
+  <i class="bg-icon checkmarksmall active"></i>&nbsp; <span>Following</span>
+  <[ } else { ]>
+  <i class="bg-icon plus active"></i>&nbsp; <span>Follow</span>
+  <[ } ]>
+  </a>
+  <span class="callout"><< data.followersCount >></span>
+  </div>
+  <div class="private-message">
+  <a class="btn" href="/edit/compose?recipientId=<< data.id >>&amp;linkTo=/member/<< encodeURIComponent(data.screenName) >>/"><i class="bg-icon email"></i>Message</a>
+  </div>
+  </div>
+  </div>
+  <[ if (data.about && data.about.length > 0) { ]>
+  <div class="bio">
+  <a href="/member/<< encodeURIComponent(data.screenName) >>/"><span class="ibl">Bio:</span> << data.about >></a>
+  </div>
+  <[ } ]>
+  </div>
+  </div>
+</script>
+
+<script id="statscard-wrapper-template" type="text/template">
+  <div class="popover statscard-popover"><div class="arrow"></div><div class="popover-content"></div></div>
+</script>
+
+  
+  
+  </div>
+
+
+
+
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
